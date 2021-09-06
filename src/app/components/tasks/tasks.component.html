@@ -1,0 +1,5 @@
+<app-add-task (onAddTask)="addTask($event)"></app-add-task>
+<div *ngIf="this.tasks.length===0; else elseBlock">No tasks to display.</div>
+<ng-template #elseBlock>
+    <app-task-item *ngFor="let task of tasks" [task]="task" (onDeleteTask)="deleteTask(task)" (onToggleDone)="ToggleDone(task)"></app-task-item>
+</ng-template>

@@ -1,0 +1,5 @@
+<div [ngClass]='{strike: task.done}' class="task" (dblclick)="onToggle(task)">
+    <h3><fa-icon [icon]="faCircle" ></fa-icon>{{task.title}} <fa-icon (click)="onClick(task)" [icon]="faTrash"></fa-icon></h3>
+    <p>Due Date : {{ task.due }}</p>
+    <p>Details : {{task.description}}</p>
+</div>
